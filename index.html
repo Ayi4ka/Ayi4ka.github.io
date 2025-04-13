@@ -1,96 +1,34 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио | Afi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Портфолио проектов</h1>
+      <p>Проекты на C, C++, Python и другие</p>
+    </header>
 
-export default function Portfolio() {
-  const projects = [
-    {
-      title: "Система определения частоты вращения вентилятора",
-      tech: ["LabVIEW", "Аналоговые датчики"],
-      role: "Разработка интерфейса и логики на LabVIEW",
-      description:
-        "Измерение оборотов вентилятора без тахосистем. Регулировка скорости, логгирование данных в .log файл, считывание с фотодиода. Уникальный инженерный проект с аппаратно-программной связкой.",
-    },
-    {
-      title: "CarServiceAccounting — учёт автосервиса",
-      tech: ["C++", "Visual Studio"],
-      role: "Разработка заголовочных файлов и участие в логике ПО",
-      description:
-        "Программа для управления бухгалтерией автосервиса: услуги, сделки, клиенты. Возможность создания годовых отчетов, хранение данных в электронной базе.",
-    },
-    {
-      title: "Игра 'Змейка' (графическая версия)",
-      tech: ["C++", "OOP", "Forms"],
-      role: "Полный разработчик",
-      description:
-        "Классическая змейка с графическим интерфейсом: уровни сложности, телепортация, ускорение, моментальная смерть. Управление стрелками, сохранение рекордов.",
-    },
-    {
-      title: "База данных авиарейсов",
-      tech: ["C++", "Связные списки"],
-      role: "Разработка структуры и функций БД",
-      description:
-        "Поиск, фильтрация, редактирование рейсов на основе связного списка. Условия: направление и стоимость билета не выше заданной.",
-    },
-    {
-      title: "Множества + анализ строки",
-      tech: ["C"],
-      role: "Разработка типа данных 'множество' и логики операций",
-      description:
-        "Операции над множествами: объединение, пересечение, разность и симметричная разность. Анализ строки — подсчёт и вывод русских гласных.",
-    },
-    {
-      title: "Функция C(x, p) — табулирование и расчёт",
-      tech: ["C", "Динамические массивы"],
-      role: "Разработка численного решения и интерфейса вывода",
-      description:
-        "Табулирование математической функции по диапазонам X и P с заданным шагом. Обработка ошибок, генерация таблиц и легенд.",
-    },
-    {
-      title: "K-means: сжатие цветов",
-      tech: ["Python"],
-      role: "Разработка алгоритма с нуля",
-      description:
-        "Алгоритм кластеризации цветов в изображении без использования готовых библиотек. Понимание основ ML и работы с изображениями.",
-    },
-    {
-      title: "Шифр Цезаря",
-      tech: ["Python"],
-      role: "Автор скрипта",
-      description:
-        "Реализация классического шифра: сдвиг символов алфавита с поддержкой латиницы и кириллицы. Без использования готовых библиотек.",
-    },
-    {
-      title: "Крестики-нолики с ИИ",
-      tech: ["C++"],
-      role: "Разработка логики игры",
-      description:
-        "Игра против компьютера с ИИ-логикой. Учет побед, ничьих, ходов, отрисовка поля. Логика минимакса или случайного выбора (в зависимости от варианта).",
-    },
-  ];
+    <main class="projects">
+      <!-- Пример карточки проекта -->
+      <section class="project-card">
+        <h2>Игра "Змейка" (консольная)</h2>
+        <p><strong>Язык:</strong> C</p>
+        <p><strong>Роль:</strong> Полный разработчик</p>
+        <p>
+          Классическая змейка в консоли с управлением стрелками, псевдографикой,
+          увеличением скорости и логикой столкновений.
+        </p>
+      </section>
 
-  return (
-    <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Портфолио проектов</h1>
-      <div className="grid gap-4 md:grid-cols-2">
-        {projects.map((project, i) => (
-          <Card key={i} className="rounded-2xl shadow-md">
-            <CardContent className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-              <p className="text-sm text-gray-600 mb-2 italic">{project.role}</p>
-              <div className="flex flex-wrap gap-2 mb-2">
-                {project.tech.map((t, j) => (
-                  <Badge key={j}>{t}</Badge>
-                ))}
-              </div>
-              <p className="text-sm text-gray-800">{project.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-      <div className="mt-8 text-center">
-        <Button>Скачать резюме</Button>
-      </div>
-    </div>
-  );
-}
+      <!-- Добавь остальные проекты сюда аналогично -->
+    </main>
+
+    <footer>
+      <p>© 2025 Afi | GitHub: <a href="https://github.com/Ayi4ka">Ayi4ka</a></p>
+    </footer>
+  </body>
+</html>
